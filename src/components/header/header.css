@@ -32,8 +32,14 @@
     font-weight: bold;
     opacity: 0.8;
     gap: 16px;
+    border-bottom: 3px solid var(--b);
+    padding: 10px;
 }
 
 .header a img {
     width: 20px;
+}
+
+.listings {
+    background-color: var(--w);
 }

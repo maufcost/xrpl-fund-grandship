@@ -52,6 +52,13 @@
     width: 20px;
 }
 
+.home-classic-cars,
+.home-real-state {
+    background-color: var(--w);
+    padding: 20px;
+    border-radius: 8px;
+}
+
 .title-container {
     display: flex;
     align-items: center;
@@ -68,4 +75,103 @@
     color: var(--w);
     padding: 1px 10px;
     font-weight: 800;
+}
+
+.listings {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    border-radius: 8px;
+    background-color: var(--w);
+    transition: 0.2s;
+    border: 1px solid var(--shadow-color);
+    overflow: hidden;
+}
+
+.thumbnail:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    box-shadow: 0 0 15px var(--shadow-color);
+}
+
+.thumbnail .content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnail .img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+}
+
+.thumbnail .img-wrapper img {
+    width: 133%;
+    height: auto;
+    transition: 0.2s;
+}
+
+.thumbnail:hover .img-wrapper img {
+    width: 150%;
+    transition: 0.2s;
+}
+
+.thumbnail .name {
+    color: var(--dark);
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.thumbnail .row-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.thumbnail .row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.thumbnail .location {
+    color: var(--b);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.thumbnail .location img {
+    width: 9px;
+}
+
+.thumbnail .share-price {
+    font-weight: bold;
+    /* font-size: 1.4em; */
+    background-color: var(--bg);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+.thumbnail .xrp {
+    font-size: 1.4em;
+    color: var(--b);
+    transition: 0.2s;
+    margin-top: auto;
+}
+
+.thumbnail:hover .xrp {
+    font-weight: bold;
+    transition: 0.2s;
 }
