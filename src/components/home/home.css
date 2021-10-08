@@ -1,11 +1,14 @@
 .showcase-container {
     background-color: var(--w);
-    padding: 50px 0;
+    padding-top: 30px;
     margin-bottom: 30px;
 }
 
 .showcase-container .left {
     width: 62%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .showcase-container h1 {
@@ -26,6 +29,35 @@
 
 .showcase {
     display: flex;
+    gap: 50px;
+    height: 400px;
+    margin-top: 40px;
+}
+
+.showcase .right {
+    overflow: hidden;
+    border-top-left-radius: 50%;
+}
+
+.showcase .right img {
+    margin-left: -30px;
+    margin-top: 0px;
+    width: 120%;
+    height: auto;
+}
+
+.rs .right {
+    overflow: hidden;
+    border-top-left-radius: 50%;
+    width: 80%;
+    position: relative;
+}
+
+.rs .right img {
+    height: auto;
+    width: 100% !important;
+    position: absolute;
+    right: 0;
 }
 
 .showcase button {
@@ -39,6 +71,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    align-self: flex-start;
 }
 
 .showcase button:hover {
@@ -88,7 +121,7 @@
     border-radius: 8px;
     background-color: var(--w);
     transition: 0.2s;
-    border: 1px solid var(--shadow-color);
+    border: 1px solid var(--almostfff);
     overflow: hidden;
 }
 

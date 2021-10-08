@@ -14,7 +14,7 @@ class App extends React.Component {
                 <Header />
                 <Router>
                     <Home path="/home/:type" />
-                    <Detail path="/token/:id" />
+                    <Detail path="/detail/:type/token/:id" />
                 </Router>
             </div>
         )

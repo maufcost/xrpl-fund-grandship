@@ -7,6 +7,8 @@ import './home.css'
 // General static assets
 import ArrowRight from '../../assets/arrow-right.svg'
 import Pin from '../../assets/pin.svg'
+import CarShowcase from '../../assets/dg.jpeg'
+import HouseShowcase from '../../assets/house-showcase.jpeg'
 
 // Sample classic car listings
 import CarDodgeCharger1968 from '../../assets/classic-cars-sample/1968-dodge-charger.jpeg'
@@ -23,6 +25,18 @@ import Maverick275 from '../../assets/classic-cars-sample/mv2.jpeg'
 import ShelbyCobra from '../../assets/classic-cars-sample/shelby-cobra-1965.jpeg'
 
 // Sample real state listings
+import House1 from '../../assets/real-state-sample/house1.jpeg'
+import House2 from '../../assets/real-state-sample/house2.png'
+import House3 from '../../assets/real-state-sample/house3.jpeg'
+import House4 from '../../assets/real-state-sample/house4.jpeg'
+import House5 from '../../assets/real-state-sample/house5.jpeg'
+import House6 from '../../assets/real-state-sample/house6.jpeg'
+import House71 from '../../assets/real-state-sample/house71.jpeg'
+import House72 from '../../assets/real-state-sample/house72.jpeg'
+import House73 from '../../assets/real-state-sample/house73.jpeg'
+import House74 from '../../assets/real-state-sample/house74.jpeg'
+import House75 from '../../assets/real-state-sample/house75.jpeg'
+import House76 from '../../assets/real-state-sample/house76.jpeg'
 
 // https://youtu.be/1JayNoKqdl4
 
@@ -105,74 +119,67 @@ class Home extends React.Component {
             ],
             realStateListings: [
                 {
-                    img: "",
-                    name: "",
-                    location: "",
-                    specs: "",
-                    fullPrice: "82,360",
-                    sharePrice: "13,726.67",
-                    shareType: "1/6 of total cost",
-                    xrp: "76,655.78"
+                    img: House1,
+                    name: "3-bedroom House",
+                    location: "Canada",
+                    sharePrice: "625,000",
+                    shareType: "1/8 of total cost",
+                    xrp: "582K"
                 },
                 {
-                    img: "",
-                    name: "",
-                    location: "",
-                    specs: "",
-                    fullPrice: "82,360",
-                    sharePrice: "13,726.67",
-                    shareType: "1/6 of total cost",
-                    xrp: "76,655.78"
+                    img: House2,
+                    name: "4-bedroom House Close to the Beach",
+                    location: "USA",
+                    sharePrice: "22,500",
+                    shareType: "1/4 of total cost",
+                    xrp: "20K"
                 },
                 {
-                    img: "",
-                    name: "",
-                    location: "",
-                    specs: "",
-                    fullPrice: "82,360",
-                    sharePrice: "13,726.67",
-                    shareType: "1/6 of total cost",
-                    xrp: "76,655.78"
+                    img: House3,
+                    name: "Downtown House",
+                    location: "Brazil",
+                    sharePrice: "350,000",
+                    shareType: "1/8 of total cost",
+                    xrp: "326K"
                 },
                 {
-                    img: "",
-                    name: "",
-                    location: "",
-                    specs: "",
-                    fullPrice: "82,360",
-                    sharePrice: "13,726.67",
+                    img: House4,
+                    name: "Touristic Area - House and Studio",
+                    location: "Bali",
+                    sharePrice: "268,000",
                     shareType: "1/6 of total cost",
-                    xrp: "76,655.78"
+                    xrp: "250K"
                 },
                 {
-                    img: "",
-                    name: "",
-                    location: "",
-                    specs: "",
-                    fullPrice: "82,360",
-                    sharePrice: "13,726.67",
-                    shareType: "1/6 of total cost",
-                    xrp: "76,655.78"
+                    img: House5,
+                    name: "Newly Built House by the Beach",
+                    location: "Greece",
+                    sharePrice: "800,000",
+                    shareType: "1/10 of total cost",
+                    xrp: "745K"
                 },
                 {
-                    img: "",
-                    name: "",
-                    location: "",
-                    specs: "",
-                    fullPrice: "82,360",
-                    sharePrice: "13,726.67",
+                    img: House71,
+                    additionalImgs:[
+                        House71, House72,
+                        House73, House74,
+                        House75, House76
+                    ],
+                    name: "5-bedroom house in Gated Condo",
+                    location: "USA",
+                    specs: "5 Bedrooms, 7 Bathrooms",
+                    fullPrice: "3,000,000",
+                    sharePrice: "500,000",
                     shareType: "1/6 of total cost",
-                    xrp: "76,655.78"
+                    xrp: "466K"
                 },
                 {
-                    img: "",
-                    name: "",
-                    location: "",
-                    specs: "",
-                    fullPrice: "82,360",
-                    sharePrice: "13,726.67",
-                    shareType: "1/6 of total cost",
-                    xrp: "76,655.78"
+                    img: House6,
+                    name: "Recently Renovated 2-bedroom",
+                    location: "Greece",
+                    sharePrice: "500,000",
+                    shareType: "1/4 of total cost",
+                    xrp: "468K"
                 },
             ],
             hotWalletAddress: ''
@@ -219,6 +226,7 @@ class ClassicCarsHome extends React.Component {
                             </button>
                         </div>
                         <div className="right">
+                            <img src={CarShowcase} alt="Own and invest in classic cars for a fraction of the cost" />
                         </div>
                     </div>
                 </div>
@@ -244,23 +252,24 @@ class RealStateHome extends React.Component {
         return (
             <div className="home-real-state-container">
                 <div className="showcase-container">
-                    <div className="showcase auto">
+                    <div className="showcase rs auto">
                         <div className="left">
-                            <h1>Own homes for just a fraction of the cost</h1>
-                            <p>Shared home ownership is now even easier with the XRP Ledger</p>
+                            <h1>Shared home ownership made easy with the XRP Ledger</h1>
+                            <p>Own real state for just a fraction of the cost</p>
                             <button>
                                 Understand how
                                 <img src={ArrowRight} alt="Understand how" />
                             </button>
                         </div>
                         <div className="right">
+                            <img src={HouseShowcase} alt="Own real state for just a fraction of the cost" />
                         </div>
                     </div>
                 </div>
                 <div className="home-real-state auto">
                     <div className="title-container">
                         <h2>Browse vacation homes and apartments</h2>
-                        <span className="new">new</span>
+                        <span className="new">New homes were just added</span>
                     </div>
                     <div className="listings">{ls}</div>
                 </div>
@@ -275,7 +284,7 @@ class CarThumbnail extends React.Component {
 
         // <p className="">{listing.fullPrice}</p>
         return (
-            <div className="thumbnail">
+            <div className="thumbnail" onClick={() => navigate("/detail/classic-cars/token/98163")}>
                 <div className="img-wrapper">
                     <img src={listing.img} alt="Listing" />
                 </div>
@@ -304,14 +313,17 @@ class RealStateThumbnail extends React.Component {
 
         // <p className="">{listing.fullPrice}</p>
         return (
-            <div className="thumbnail">
+            <div className="thumbnail" onClick={() => navigate("/detail/real-state/token/738912")}>
                 <div className="img-wrapper">
                     <img src={listing.img} alt="Listing" />
                 </div>
                 <div className="content">
                     <div className="row-1">
                         <p className="name">{listing.name}</p>
-                        <p className="location">{listing.location}</p>
+                        <p className="location">
+                            <img src={Pin} alt={listing.location} />
+                            {listing.location}
+                        </p>
                     </div>
                     <div className="row-2">
                         <p className="share-price">~${listing.sharePrice}</p>
