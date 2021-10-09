@@ -181,7 +181,7 @@ const mintNFTOnXRPL = async (nft) => {
 
 const simulatePurchase = (nft) => {
     const { name, desc, price } = nft
-    // @todo: Still pending
+    // @todo: Still figuring out how we will process purchases
 }
 
 const convertFromXPRToNFTNotation = (xpr) => {

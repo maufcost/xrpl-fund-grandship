@@ -141,9 +141,9 @@ class Mint extends React.Component {
        //     });
        //
        //     // To prevent multiple requests.
-       //     setTimeout(() => {
-       //         navigate("/")
-       //     }, 2500)
+           setTimeout(() => {
+               navigate("/")
+           }, 2500)
        // })
        // .catch(error => {
        //     console.log("Error uploading file:")
