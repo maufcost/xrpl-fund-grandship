@@ -59,9 +59,14 @@ class Detail extends React.Component {
                         </div>
                         <span className="share-type">{listing.shareType}</span>
                         <p className="specs">{listing.specs}</p>
-                        <hr />
-                        <button className="p">Purchase</button>
-                        <button className="s">Send question to seller</button>
+                        <div>
+                            <hr />
+                            <button className="s">Send question to seller</button>
+                            <button className="s">See current owners</button>
+                            <button className="s">See past owners</button>
+                            <button className="s">Insurance inquiries</button>
+                        </div>
+                        <button className="p x">Purchase</button>
                     </div>
                 </div>
             </div>

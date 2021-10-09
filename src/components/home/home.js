@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { navigate } from '@reach/router'
+import { getListings } from '../../firebase'
 
 import './home.css'
 
@@ -167,7 +168,7 @@ class Home extends React.Component {
                     ],
                     name: "5-bedroom house in Gated Condo",
                     location: "USA",
-                    specs: "5 Bedrooms, 7 Bathrooms",
+                    specs: "5 Bedrooms, 7 Bathrooms. You will have full access to this house for 60 days per year.",
                     fullPrice: "3,000,000",
                     sharePrice: "500,000",
                     shareType: "1/6 of total cost",
@@ -186,10 +187,42 @@ class Home extends React.Component {
         }
     }
 
-    componentDidMount() {
-        // Retrieving listings
+    async componentDidMount() {
+        // Retrieving listings (testing mode)
+        await getListings()
+        .then(ls => {
+            this.setState({
+                carListings: ls.carListings,
+                realStateListings: ls.realStateListings
+            })
+        })
+        .catch(error => console.log(error))
 
         // Retrieving user's hot wallet address
+        const apiURL = "http://localhost:5000/get-hot-wallet-addr"
+        axios({
+            method: "get",
+            url: apiURL,
+            data: bodyFormData,
+            headers: { "Content-Type": "multipart/form-data" },
+        })
+        .then(response => {
+            // handle success
+            console.log(response);
+            setTimeout(() => {
+                // To prevent multiple subsequent requests to our API.
+                this.setState({ loading: false, addr: response.data })
+            }, 2000)
+        })
+        .catch(error => {
+            // handle error
+            console.log(error);
+            setTimeout(() => {
+                console.log(error)
+                // To prevent multiple subsequent requests to our API.
+                this.setState({ loading: false })
+            }, 2000)
+        });
     }
 
     render() {

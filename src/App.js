@@ -2,6 +2,7 @@ import React from 'react'
 import { Router } from '@reach/router'
 
 import Home from './components/home/home'
+import Mint from './components/mint/mint'
 import Header from './components/header/header'
 import Detail from './components/detail/detail'
 
@@ -14,6 +15,7 @@ class App extends React.Component {
                 <Header />
                 <Router>
                     <Home path="/home/:type" />
+                    <Mint path="/mint" />
                     <Detail path="/detail/:type/token/:id" />
                 </Router>
             </div>
