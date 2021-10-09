@@ -10,27 +10,26 @@ import {
     getDocs,
     updateDoc,
     arrayUnion,
-    arrayRemove,,
-    removeDoc
+    arrayRemove,
     collection,
     query,
     where
 } from "firebase/firestore";
-// const firebaseConfig = {
-//     apiKey: process.env.key,
-//     authDomain: process.env.domain,
-//     projectId: process.env.pid,
-//     storageBucket: process.env.bucket || "test-pid",
-//     messagingSenderId: "696235957039",
-//     appId: "1:696235957039:web:fe6eef42b5003b757a5fda",
-//     measurementId: "G-Q59LQZ3BZQ"
-// };
-//
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-// const db = getFirestore();
-// const storage = getStorage();
+const firebaseConfig = {
+    apiKey: process.env.key,
+    authDomain: process.env.domain,
+    projectId: process.env.pid,
+    storageBucket: process.env.bucket || "test-pid",
+    messagingSenderId: "696235957039",
+    appId: "1:696235957039:web:fe6eef42b5003b757a5fda",
+    measurementId: "G-Q59LQZ3BZQ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = getFirestore();
+const storage = getStorage();
 
 // After an NFT is bought, we will remove it from our db forever.
 export const addNFTToDB = async (file) => {
@@ -89,11 +88,13 @@ export const addNFTToDB = async (file) => {
 }
 
 // This nft has been bought
-export const removeNFTToDB = async (id) => {
-    const storageRef = ref(storage, 'files/' + id)
-    removeDoc(storageRef)
+export const removeNFTFromDB = async (id) => {
+    // const storageRef = ref(storage, 'files/' + id)
+
+    // @todo: We are still figuring out a way of not using a database
+    // for listings. We'd like to keep everything decentralized.
 }
 
-export getListings = async () => {
+export const getListings = async () => {
     // Still exploring the best methods here...
 }

@@ -46,13 +46,6 @@ class Mint extends React.Component {
     }
 
     componentDidMount() {
-       // const nouns = ['fans', 'listeners', 'viewers', 'community']
-       // let ix = 0
-       // setInterval(() => {
-       //     this.setState({ noun: nouns[ix] }, () => {
-       //         ix = ++ix % nouns.length
-       //     })
-       // }, 2000)
        setTimeout(() => {
            this.setState({ loading: false })
        }, 2000)
@@ -93,9 +86,9 @@ class Mint extends React.Component {
    }
 
    async create() {
-       // if (this.state.nft_price <= 0) return;
-       // if (this.state.nft_period <= 0) return;
-       // if (this.state.nft_quantity <= 0) return;
+       if (this.state.nft_price <= 0) return;
+       if (this.state.nft_period <= 0) return;
+       if (this.state.nft_quantity <= 0) return;
 
        const tokenInfo = {
            name: this.state.nft_name,
@@ -111,44 +104,44 @@ class Mint extends React.Component {
        const apiURL = "http://localhost:5000/mint"
 
        // Adding to db
-       // addNFTToDB
-       // .then(url => {
-       //     const bodyFormData = new FormData();
-       //     bodyFormData.append("file_url_raw", url);
-       //
-       //     // API call here (to submit file URL)
-       //     axios({
-       //         method: "post",
-       //         url: apiURL,
-       //         data: bodyFormData,
-       //         headers: { "Content-Type": "multipart/form-data" },
-       //     })
-       //     .then(response => {
-       //         // handle success
-       //         console.log(response);
-       //         setTimeout(() => {
-       //             // To prevent multiple subsequent requests to our API.
-       //             this.setState({ loading: false })
-       //         }, 2000)
-       //     })
-       //     .catch(error => {
-       //         // handle error
-       //         console.log(error);
-       //         setTimeout(() => {
-       //             // To prevent multiple subsequent requests to our API.
-       //             this.setState({ loading: false })
-       //         }, 2000)
-       //     });
-       //
-       //     // To prevent multiple requests.
+       addNFTToDB
+       .then(url => {
+           const bodyFormData = new FormData();
+           bodyFormData.append("file_url_raw", url);
+
+           // API call here (to submit file URL)
+           axios({
+               method: "post",
+               url: apiURL,
+               data: bodyFormData,
+               headers: { "Content-Type": "multipart/form-data" },
+           })
+           .then(response => {
+               // handle success
+               console.log(response);
+               setTimeout(() => {
+                   // To prevent multiple subsequent requests to our API.
+                   this.setState({ loading: false })
+               }, 2000)
+           })
+           .catch(error => {
+               // handle error
+               console.log(error);
+               setTimeout(() => {
+                   // To prevent multiple subsequent requests to our API.
+                   this.setState({ loading: false })
+               }, 2000)
+           });
+
+           // To prevent multiple requests.
            setTimeout(() => {
                navigate("/")
            }, 2500)
-       // })
-       // .catch(error => {
-       //     console.log("Error uploading file:")
-       //     console.log(error)
-       // })
+       })
+       .catch(error => {
+           console.log("Error uploading file:")
+           console.log(error)
+       })
    }
 
    onChangeCarCheckbox(e) {

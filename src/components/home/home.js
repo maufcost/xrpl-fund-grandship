@@ -203,7 +203,6 @@ class Home extends React.Component {
         axios({
             method: "get",
             url: apiURL,
-            data: bodyFormData,
             headers: { "Content-Type": "multipart/form-data" },
         })
         .then(response => {

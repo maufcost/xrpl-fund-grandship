@@ -43,3 +43,13 @@
 .listings {
     background-color: var(--w);
 }
+
+.logo {
+    color: var(--b);
+    font-weight: bold;
+}
+
+.logo:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}

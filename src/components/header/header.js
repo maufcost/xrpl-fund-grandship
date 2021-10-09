@@ -11,7 +11,7 @@ class Header extends React.Component {
             <div className="header-container">
                 <div className="header">
                     <p className="logo" onClick={() => navigate("/")}>
-                        <img src={null} alt={"BUSINESS NAME"} />
+                        Grandship
                     </p>
                     <div className="nav">
                         <a href="/">Explore</a>

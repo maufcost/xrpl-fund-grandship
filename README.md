@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Grandship | Shared Ownership
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Grandship allows people to own shares of classic cars and real estate properties.
+## Shares are represented as NFTs
 
-## Available Scripts
+## Grandship is built on top of the XRP Ledger (XRPL).
 
-In the project directory, you can run:
+## Proof of concept (demo) video: https://youtu.be/n1AVxPU7oD4
 
-### `yarn start`
+### This is a project still under active development.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Built by Mauricio Costa (https://github.com/maufcost) and Nathan Wilk (https://github.com/Nate8888).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Screenshots:
 
-### `yarn test`
+!(Grandship pt. 1)[https://firebasestorage.googleapis.com/v0/b/xrpl-nate.appspot.com/o/Screen%20Shot%202021-10-09%20at%2016.24.31.png?alt=media&token=85c1b25a-d42c-440a-a4c1-e2ef07341ad4]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+!(Grandship pt. 2)[https://firebasestorage.googleapis.com/v0/b/xrpl-nate.appspot.com/o/Screen%20Shot%202021-10-09%20at%2016.24.38.png?alt=media&token=fd283b86-aa51-476d-8b1e-050003b3196e]
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+!(Grandship pt. 3)[https://firebasestorage.googleapis.com/v0/b/xrpl-nate.appspot.com/o/Screen%20Shot%202021-10-09%20at%2016.24.50.png?alt=media&token=65f2a7ce-bd45-4adf-9a98-8dd17648ba45]

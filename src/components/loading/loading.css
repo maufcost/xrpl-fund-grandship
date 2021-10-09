@@ -15,8 +15,12 @@
 }
 
 .loading-container .loading {
-    background-color: var(--p);
-    width: 50px;
+    background-color: var(--bg);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
     height: 50px;
     border-radius: 4px;
     animation: spin 1s linear 1s infinite;
