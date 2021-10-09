@@ -55,7 +55,7 @@ class Home extends React.Component {
                     fullPrice: "84,000",
                     sharePrice: "21,000",
                     shareType: "1/4 of total cost",
-                    xrp: "7,818.22"
+                    xrp: "19,695.22"
                 },
                 {
                     img: Corvette571,
@@ -65,11 +65,11 @@ class Home extends React.Component {
                         Corvette575, Corvette576
                     ],
                     name: "Chevrolet Corvette 1957",
-                    location: "Berlin",
+                    location: "USA",
                     fullPrice: "119,000",
                     sharePrice: "19,830",
                     shareType: "1/6 of total cost",
-                    xrp: "110,758.11"
+                    xrp: "18,597.11"
                 },
                 {
                     img: Maverick275,
@@ -78,16 +78,16 @@ class Home extends React.Component {
                     fullPrice: "36,500",
                     sharePrice: "9,125",
                     shareType: "1/4 of total cost",
-                    xrp: "33,972.02"
+                    xrp: "8,557.02"
                 },
                 {
                     img: MustangShelby,
                     name: "Mustang Shelby",
-                    location: "USA",
+                    location: "Berlin",
                     fullPrice: "73,260",
                     sharePrice: "9,157.5",
                     shareType: "1/8 of total cost",
-                    xrp: "68,186.04"
+                    xrp: "9,430.12"
                 },
                 {
                     img: Maverick75,
@@ -96,7 +96,7 @@ class Home extends React.Component {
                     fullPrice: "42,910",
                     sharePrice: "7,151.67",
                     shareType: "1/6 of total cost",
-                    xrp: "39,938.07"
+                    xrp: "8,587.5"
                 },
                 {
                     img: ShelbyCobra,
@@ -105,16 +105,16 @@ class Home extends React.Component {
                     fullPrice: "1,499,000",
                     sharePrice: "74,950",
                     shareType: "1/20 of total cost",
-                    xrp: "1,395,179.84"
+                    xrp: "70,292.2"
                 },
                 {
                     img: Corvette64,
                     name: "Chevrolet Corvette 1964",
                     location: "USA",
                     fullPrice: "82,360",
-                    sharePrice: "13,726.67",
+                    sharePrice: "13,726",
                     shareType: "1/6 of total cost",
-                    xrp: "76,655.78"
+                    xrp: "12,873"
                 },
             ],
             realStateListings: [
@@ -211,7 +211,7 @@ class ClassicCarsHome extends React.Component {
         const { listings } = this.props
 
         // Rendering thumbnails based on listings
-        const ls = listings.map((l, ix) => <CarThumbnail listing={l} />)
+        const ls = listings.map((l, ix) => <CarThumbnail listing={l} key={ix} />)
 
         return (
             <div className="home-classic-cars-container">
@@ -247,7 +247,7 @@ class RealStateHome extends React.Component {
         const { listings } = this.props
 
         // Rendering thumbnails based on listings
-        const ls = listings.map((l, ix) => <RealStateThumbnail listing={l} />)
+        const ls = listings.map((l, ix) => <RealStateThumbnail listing={l} key={ix} />)
 
         return (
             <div className="home-real-state-container">
@@ -281,10 +281,16 @@ class RealStateHome extends React.Component {
 class CarThumbnail extends React.Component {
     render() {
         const { listing } = this.props
+        const state = {
+            state: {
+                type: 'classic-car',
+                listing
+            }
+        }
 
         // <p className="">{listing.fullPrice}</p>
         return (
-            <div className="thumbnail" onClick={() => navigate("/detail/classic-cars/token/98163")}>
+            <div className="thumbnail" onClick={() => navigate("/detail/classic-cars/token/98163", state)}>
                 <div className="img-wrapper">
                     <img src={listing.img} alt="Listing" />
                 </div>
@@ -310,10 +316,16 @@ class CarThumbnail extends React.Component {
 class RealStateThumbnail extends React.Component {
     render() {
         const { listing } = this.props
+        const state = {
+            state: {
+                type: 'real-state',
+                listing
+            }
+        }
 
         // <p className="">{listing.fullPrice}</p>
         return (
-            <div className="thumbnail" onClick={() => navigate("/detail/real-state/token/738912")}>
+            <div className="thumbnail" onClick={() => navigate("/detail/real-state/token/738912", state)}>
                 <div className="img-wrapper">
                     <img src={listing.img} alt="Listing" />
                 </div>
